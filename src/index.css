@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-neon-green: #00FF88;
+  --color-hackerrank-green: #2EC866;
+  --color-hackerrank-teal: #00B5B8;
+  --color-dark-bg: #080808;
+  --color-dark-card: #111111;
+  --color-dark-surface: #161616;
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #080808;
+  color: #d1d5db;
+  font-family: "Inter", system-ui, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f1f1f;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2EC866;
+}
+
+/* ── Glass morphism ── */
+.glass {
+  background: rgba(14, 14, 14, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── Neon Glow Utilities (HackerRank themed) ── */
+.text-glow {
+  text-shadow: 0 0 8px rgba(46, 200, 102, 0.6), 0 0 20px rgba(46, 200, 102, 0.3);
+}
+
+.text-glow-sm {
+  text-shadow: 0 0 6px rgba(46, 200, 102, 0.5);
+}
+
+.text-glow-strong {
+  text-shadow: 0 0 15px rgba(46, 200, 102, 0.8), 0 0 35px rgba(46, 200, 102, 0.4);
+}
+
+.neon-border {
+  border-color: #2EC866;
+  box-shadow: 0 0 8px rgba(46, 200, 102, 0.3), inset 0 0 8px rgba(46, 200, 102, 0.05);
+}
+
+.card-glow {
+  transition: all 0.35s ease;
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 25px rgba(46, 200, 102, 0.18), 0 0 60px rgba(46, 200, 102, 0.06);
+  border-color: rgba(46, 200, 102, 0.45) !important;
+  transform: translateY(-6px);
+}
+
+/* ── Terminal Animation (HackerRank style) ── */
+.terminal-prompt {
+  @apply text-hackerrank-green mr-4;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 0.6em;
+  height: 1.1em;
+  background-color: #2EC866;
+  vertical-align: middle;
+  margin-left: 0.1em;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ── Scan line overlay ── */
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(0deg,
+      transparent,
+      transparent 2px,
+      rgba(46, 200, 102, 0.015) 2px,
+      rgba(46, 200, 102, 0.015) 4px);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ── Float animation ── */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.float-slow {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* ── Pulse glow (HackerRank themed) ── */
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(46, 200, 102, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 30px rgba(46, 200, 102, 0.7), 0 0 60px rgba(46, 200, 102, 0.2);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* ── Typewriter cursor ── */
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+}
+
+/* ── Scroll progress bar (HackerRank gradient) ── */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2EC866, #00B5B8);
+  transform-origin: left;
+  z-index: 9999;
+}
+
+/* ── Number ticker ── */
+@keyframes count-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Grid bg pattern (HackerRank themed) ── */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(46, 200, 102, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(46, 200, 102, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ── Gradient text (HackerRank colors) ── */
+.gradient-text {
+  background: linear-gradient(135deg, #2EC866 0%, #00B5B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Neon button (HackerRank style) ── */
+.neon-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.neon-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(46, 200, 102, 0.25);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.neon-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* ── Border beam (HackerRank colors) ── */
+@keyframes border-beam {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 200% 0%;
+  }
+}
+
+.border-beam {
+  background: linear-gradient(90deg, transparent, #2EC866, transparent);
+  background-size: 200% 100%;
+  animation: border-beam 2s linear infinite;
+}
+
+/* ── Card shine ── */
+.card-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-shine::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 30%;
+  height: 200%;
+  background: linear-gradient(to right,
+      transparent 0%,
+      rgba(46, 200, 102, 0.08) 50%,
+      transparent 100%);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.card-shine:hover::before {
+  left: 130%;
+}
+
+/* ── HackerRank Badge Animation ── */
+@keyframes badgePulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 2px rgba(46, 200, 102, 0.5));
+  }
+
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(46, 200, 102, 0.8));
+  }
+}
+
+.hackerrank-badge {
+  animation: badgePulse 2s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.hackerrank-badge:hover {
+  animation: none;
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 12px rgba(46, 200, 102, 1));
+}
+
+/* ── Platform Card Styles ── */
+.platform-card {
+  background: linear-gradient(135deg, rgba(46, 200, 102, 0.05) 0%, rgba(0, 181, 184, 0.05) 100%);
+  border-left: 3px solid #2EC866;
+  transition: all 0.3s ease;
+}
+
+.platform-card:hover {
+  background: linear-gradient(135deg, rgba(46, 200, 102, 0.1) 0%, rgba(0, 181, 184, 0.1) 100%);
+  border-left: 3px solid #00B5B8;
+  transform: translateX(8px);
+}
+
+/* ── Skill Tabs (HackerRank style) ── */
+.skill-tab {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.skill-tab::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #2EC866, #00B5B8);
+  transition: width 0.3s ease;
+}
+
+.skill-tab:hover::after,
+.skill-tab.active::after {
+  width: 100%;
+}
+
+.skill-tab.active {
+  color: #2EC866;
+  text-shadow: 0 0 8px rgba(46, 200, 102, 0.3);
+}
+
+/* ── Code Block Styling (HackerRank Editor) ── */
+.hackerrank-code {
+  background: #0A0A0A;
+  border: 1px solid rgba(46, 200, 102, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+
+.hackerrank-code:hover {
+  border-color: rgba(46, 200, 102, 0.5);
+  box-shadow: 0 0 20px rgba(46, 200, 102, 0.1);
+}
+
+/* ── Challenge Counter Animation ── */
+@keyframes countGlow {
+  from {
+    text-shadow: 0 0 0px rgba(46, 200, 102, 0);
+  }
+
+  to {
+    text-shadow: 0 0 20px rgba(46, 200, 102, 0.6);
+  }
+}
+
+.challenge-count {
+  animation: countGlow 1s ease-out forwards;
+}
+
+/* ── Achievement Unlock Animation ── */
+@keyframes unlockGlow {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    filter: blur(2px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+    filter: blur(0);
+    text-shadow: 0 0 20px rgba(46, 200, 102, 0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+.achievement-unlock {
+  animation: unlockGlow 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ── Leaderboard Rank Animation ── */
+@keyframes rankGlow {
+  0% {
+    background: rgba(46, 200, 102, 0);
+  }
+
+  100% {
+    background: rgba(46, 200, 102, 0.2);
+  }
+}
+
+.rank-highlight {
+  animation: rankGlow 0.5s ease-out 3;
+  border-radius: 4px;
+}
+
+/* ── HackerRank Logo Container ── */
+.hackerrank-logo-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hackerrank-logo-container::before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  background: radial-gradient(circle, rgba(46, 200, 102, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hackerrank-logo-container:hover::before {
+  opacity: 1;
+}
