@@ -258,15 +258,7 @@ const Hero = () => {
           </motion.h1>
         </div>
 
-        {/* Subtitle with fade and slide */}
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.6 }}
-          className="text-lg md:text-xl font-mono text-[#2EC866]/80 uppercase tracking-[0.25em] mt-6"
-        >
-          HACKERRANK CERTIFIED
-        </motion.p>
+
 
         {/* Typewriter subtitle */}
         <motion.div
@@ -311,7 +303,7 @@ const Hero = () => {
               hidden: { y: 30, opacity: 0 },
               visible: { y: 0, opacity: 1 }
             }}
-            href="https://www.hackerrank.com/takenotsav-2026"
+            href="https://bit.ly/PlaceX2026"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative px-10 py-4 bg-[#2EC866] text-black font-black text-base rounded-2xl pulse-glow uppercase tracking-widest overflow-hidden"

@@ -121,18 +121,25 @@ const Highlights = () => {
           })}
         </div>
 
-        {/* Participation Note */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mt-12 mb-20"
+          className="text-center mt-8 md:mt-12 mb-16 md:mb-20 px-4"
         >
-          <div className="inline-block glass px-8 py-4 rounded-2xl border border-[#2EC866]/20 bg-[#2EC866]/5 shadow-[0_0_30px_rgba(46,200,102,0.05)]">
-            <p className="text-white font-medium flex items-center justify-center gap-3">
-              <span className="text-2xl">✨</span>
-              All participants will receive a <span className="text-[#2EC866] font-bold">Certificate of Participation</span>
-              <span className="text-2xl">✨</span>
+          <div className="inline-block glass px-6 py-4 md:px-10 md:py-6 rounded-2xl md:rounded-3xl border border-[#2EC866]/20 bg-[#2EC866]/5 shadow-[0_0_40px_rgba(46,200,102,0.1)] relative overflow-hidden group">
+            {/* Animated background glow for the note */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#2EC866]/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+            
+            <p className="text-white text-sm md:text-lg font-medium flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 leading-relaxed">
+              <span className="text-xl md:text-3xl animate-bounce">✨</span>
+              <span className="text-center">
+                All participants will receive a 
+                <span className="block md:inline text-[#2EC866] font-bold md:ml-2 drop-shadow-[0_0_10px_rgba(46,200,102,0.3)]">
+                  Certificate of Participation
+                </span>
+              </span>
+              <span className="text-xl md:text-3xl animate-bounce hidden md:block">✨</span>
             </p>
           </div>
         </motion.div>
