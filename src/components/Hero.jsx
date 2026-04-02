@@ -160,7 +160,7 @@ const Hero = () => {
 
             <div className="relative flex flex-col items-center justify-center">
               {/* "PlaceX" with modern stacking effect */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+              <div className="flex flex-row items-center justify-center gap-2 sm:gap-4">
                 {/* "PLACE" with slide-up animation */}
                 <motion.div
                   className="relative"
@@ -177,7 +177,7 @@ const Hero = () => {
                     }
                   }}
                 >
-                  <span className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent tracking-tighter">
+                  <span className="text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-black bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent tracking-tighter">
                     PLACE
                   </span>
                 </motion.div>
@@ -204,7 +204,7 @@ const Hero = () => {
                   onHoverEnd={() => setIsHovered(false)}
                 >
                   <motion.span
-                    className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black bg-gradient-to-r from-[#2EC866] to-[#00B5B8] bg-clip-text text-transparent tracking-tighter"
+                    className="text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-black bg-gradient-to-r from-[#2EC866] to-[#00B5B8] bg-clip-text text-transparent tracking-tighter"
                     animate={{
                       textShadow: isHovered
                         ? "0 0 30px rgba(46,200,102,0.8), 0 0 60px rgba(46,200,102,0.4)"

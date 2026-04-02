@@ -106,11 +106,11 @@ const Navbar = () => {
                   </a>
                 ))}
                 <a
-                  href="https://your-google-form-link"
+                  href="https://bit.ly/PlaceX2026"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setOpen(false)}
-                  className="block mt-4 px-4 py-3 text-center bg-neon-green text-black font-black rounded-xl uppercase tracking-widest text-sm"
+                  className="block mt-4 px-4 py-3 text-center bg-neon-green text-black font-black rounded-xl uppercase tracking-widest text-sm shadow-[0_0_15px_rgba(46,255,136,0.3)]"
                 >
                   Register Now
                 </a>

@@ -6,6 +6,7 @@ import Rounds from './components/Rounds';
 import Highlights from './components/Highlights';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import ScrollButton from './components/ScrollButton';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <FAQ />
       </main>
       <Footer />
+      <ScrollButton />
     </div>
   );
 }
