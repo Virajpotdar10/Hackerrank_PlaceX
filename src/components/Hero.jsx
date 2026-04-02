@@ -137,10 +137,23 @@ const Hero = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#2EC866]/30 bg-[#2EC866]/5 mb-8"
+          whileHover={{ scale: 1.05, translateY: -2 }}
+          className="relative inline-flex items-center gap-3 px-6 py-2.5 rounded-full border border-[#2EC866]/20 bg-[#2EC866]/5 backdrop-blur-md mb-8 group cursor-default overflow-hidden"
         >
-          <Sparkles className="w-3.5 h-3.5 text-[#2EC866]" />
-          <span className="text-[#2EC866] text-xs font-mono uppercase tracking-[0.2em]">TECHNOTSAV 2026</span>
+          {/* Internal Shimmer Effect */}
+          <motion.div
+            className="absolute inset-0 w-[200%] h-full bg-gradient-to-r from-transparent via-[#2EC866]/10 to-transparent -z-10"
+            animate={{ x: ['-100%', '100%'] }}
+            transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
+          />
+
+
+
+          <span className="text-[#2EC866] text-[10px] sm:text-xs font-bold font-mono uppercase tracking-[0.25em] relative z-10">
+            D.Y Patil College of Engineering and Technology, Kolhapur
+          </span>
+
+          <div className="absolute inset-0 rounded-full border border-[#2EC866]/0 group-hover:border-[#2EC866]/40 transition-colors duration-300 -z-10" />
         </motion.div>
 
         {/* Modern Split Text Animation */}
@@ -257,7 +270,14 @@ const Hero = () => {
             </div>
           </motion.h1>
         </div>
-
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9, duration: 0.6 }}
+          className="text-lg md:text-xl font-mono text-[#2EC866] uppercase tracking-[0.4em] mt-8 text-glow-sm relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1/3 after:h-[1px] after:bg-gradient-to-r after:from-transparent after:via-[#2EC866]/50 after:to-transparent"
+        >
+          TECHNOTSAV 2026
+        </motion.p>
 
 
         {/* Typewriter subtitle */}
@@ -279,30 +299,15 @@ const Hero = () => {
           transition={{ delay: 1.2, duration: 0.5 }}
           className="text-gray-500 text-base mt-2 font-mono tracking-wide"
         >
-          National Hiring Simulation Challenge — April 16, 2026
+          National Hiring Simulation Challenge — April 16, 2026 | Registration Fee: ₹100
         </motion.p>
 
-        {/* CTA Buttons with staggered entrance */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.2,
-                delayChildren: 1.3
-              }
-            }
-          }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-5 mt-10"
-        >
+        {/* CTA Buttons - Simplified for robustness */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mt-10">
           <motion.a
-            variants={{
-              hidden: { y: 30, opacity: 0 },
-              visible: { y: 0, opacity: 1 }
-            }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.3, duration: 0.6 }}
             href="https://bit.ly/PlaceX2026"
             target="_blank"
             rel="noopener noreferrer"
@@ -323,10 +328,9 @@ const Hero = () => {
           </motion.a>
 
           <motion.a
-            variants={{
-              hidden: { y: 30, opacity: 0 },
-              visible: { y: 0, opacity: 1 }
-            }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.5, duration: 0.6 }}
             href="#details"
             className="px-10 py-4 glass text-white font-bold text-base rounded-2xl border border-white/10 hover:border-[#2EC866]/40 hover:text-[#2EC866] transition-all duration-300 uppercase tracking-widest"
             whileHover={{ scale: 1.05, x: 5 }}
@@ -334,7 +338,7 @@ const Hero = () => {
           >
             Explore Event
           </motion.a>
-        </motion.div>
+        </div>
 
         {/* Scroll hint with pulse animation */}
         <motion.div

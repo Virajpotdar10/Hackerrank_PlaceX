@@ -8,8 +8,8 @@ const faqData = [
     answer: "Any student with basic knowledge of programming and problem-solving can participate."
   },
   {
-    question: "Is the event individual or team-based?",
-    answer: "The event is strictly individual."
+    question: "Is it compulsory to have a HackerRank account?",
+    answer: "Yes, participants must have a HackerRank account before the event."
   },
   {
     question: "What is the format of the event?",
@@ -27,39 +27,19 @@ const faqData = [
     question: "Where will the coding round be conducted?",
     answer: "The coding round will be conducted on the HackerRank platform."
   },
-
-  {
-    question: "Will certificates be provided?",
-    answer: "Yes, all participants will receive certificates."
-  },
-  {
-    question: "What are the prizes for winners?",
-    answer: "Top 3 winners will receive trophies and a HackerRank Infinity Plan (1 year), along with mock interview credits and AI tool access."
-  },
-  {
-    question: "What happens if I fail in one round?",
-    answer: "Only qualified participants will proceed to the next round."
-  },
   {
     question: "Can I use mobile phones during the event?",
     answer: "No, use of mobile phones or unfair means is strictly prohibited."
   },
   {
     question: "What should I bring on the event day?",
-    answer: "Participants should carry their college ID and required materials."
-  },
-  {
-    question: "Will there be internet access during the coding round?",
-    answer: "Yes, only for the coding platform as permitted."
+    answer: "Carry your college ID card and basic essentials. You may bring your own laptop (with charger), or you can use the PCs provided at the venue"
   },
   {
     question: "How will results be announced?",
     answer: "Results will be declared after evaluation, and winners will be announced officially."
   },
-  {
-    question: "Who should I contact for queries?",
-    answer: "For any queries, please reach out to the event coordinator or visit the help desk at the venue."
-  }
+
 ];
 
 
@@ -69,8 +49,8 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
       <button
         onClick={onClick}
         className={`w-full flex items-center justify-between p-6 rounded-2xl border transition-all duration-300 ${isOpen
-            ? 'bg-white/5 border-red-500/30'
-            : 'bg-white/[0.02] border-white/5 hover:border-white/10'
+          ? 'bg-white/5 border-red-500/30'
+          : 'bg-white/[0.02] border-white/5 hover:border-white/10'
           } glass card-shine text-left group`}
       >
         <div className="flex gap-4 items-center">

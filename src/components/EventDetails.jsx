@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Calendar, Globe, User, Clock, Target, Layers } from 'lucide-react';
+import { Calendar, Globe, User, Clock, Target, Layers, Wallet } from 'lucide-react';
 
 /* ─── Animated counter ─── */
 const Counter = ({ end, suffix = '' }) => {
@@ -25,12 +25,13 @@ const Counter = ({ end, suffix = '' }) => {
 };
 
 const details = [
-  { icon: Calendar, title: 'Date', value: '16 April 2026', sub: 'One action-packed day' },
+  { icon: Calendar, title: 'Date', value: '16 April 2026' },
   { icon: Globe, title: 'Level', value: 'National', sub: 'Open to all colleges' },
   { icon: User, title: 'Format', value: 'Individual', sub: 'Solo competition' },
-  { icon: Clock, title: 'Starts', value: '9:00 AM', sub: 'Each day' },
+  { icon: Clock, title: 'Starts', value: '9:00 AM' },
   { icon: Target, title: 'Rounds', value: '3 Rounds', sub: 'Aptitude → Code → Debug' },
   { icon: Layers, title: 'Platform', value: 'HackerRank', sub: 'Coding round' },
+  { icon: Wallet, title: 'Registration Fee', value: '₹100', sub: 'Per Participant' },
 ];
 
 

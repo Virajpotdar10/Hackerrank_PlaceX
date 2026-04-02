@@ -62,10 +62,16 @@ const Highlights = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2EC866]/10 border border-[#2EC866]/20 mb-6">
-            <Zap className="w-3.5 h-3.5 text-[#2EC866]" fill="currentColor" />
-            <span className="text-[#2EC866] font-mono text-xs uppercase tracking-[0.2em]">Powered by HackerRank</span>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="relative inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-[#2EC866]/5 border border-[#2EC866]/20 backdrop-blur-sm mb-8 group cursor-default overflow-hidden"
+          >
+            <div className="absolute inset-0 w-[200%] h-full bg-gradient-to-r from-transparent via-[#2EC866]/10 to-transparent -z-10 animate-shimmer" />
+            <Zap className="w-3 h-3 text-[#2EC866] fill-current drop-shadow-[0_0_8px_rgba(46,200,102,0.8)]" />
+            <span className="text-[#2EC866] font-mono text-[10px] uppercase tracking-[0.3em] relative z-10 font-bold">Powered by HackerRank</span>
+          </motion.div>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
             Event <span className="gradient-text">Highlights</span>
           </h2>
