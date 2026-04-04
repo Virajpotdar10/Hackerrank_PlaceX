@@ -149,8 +149,8 @@ const Hero = () => {
 
 
 
-          <span className="text-[#2EC866] text-[10px] sm:text-xs font-bold font-mono uppercase tracking-[0.25em] relative z-10">
-            DY Patil College of Engineering and Technology Kasaba Bawada, Kolhapur
+          <span className="text-[#2EC866] text-[9px] sm:text-xs font-bold font-mono uppercase tracking-[0.15em] sm:tracking-[0.25em] relative z-10 text-center px-2">
+            DY Patil College of Engineering and Technology, Kolhapur
           </span>
 
           <div className="absolute inset-0 rounded-full border border-[#2EC866]/0 group-hover:border-[#2EC866]/40 transition-colors duration-300 -z-10" />
@@ -163,7 +163,7 @@ const Hero = () => {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="mb-4"
         >
-          <span className="text-gray-400 text-[10px] sm:text-xs font-bold font-mono uppercase tracking-[0.3em] bg-white/5 px-4 py-1.5 rounded-full border border-white/10">
+          <span className="text-gray-400 text-[9px] sm:text-xs font-bold font-mono uppercase tracking-[0.2em] sm:tracking-[0.3em] bg-white/5 px-4 py-2 rounded-full border border-white/10 whitespace-nowrap">
             HackerRank Campus Crew DYPCET Present
           </span>
         </motion.div>
@@ -286,7 +286,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.6 }}
-          className="text-lg md:text-xl font-mono text-[#2EC866] uppercase tracking-[0.4em] mt-8 text-glow-sm relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1/3 after:h-[1px] after:bg-gradient-to-r after:from-transparent after:via-[#2EC866]/50 after:to-transparent"
+          className="text-base sm:text-lg md:text-xl font-mono text-[#2EC866] uppercase tracking-[0.15em] sm:tracking-[0.4em] mt-8 text-glow-sm relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1/3 after:h-[1px] after:bg-gradient-to-r after:from-transparent after:via-[#2EC866]/50 after:to-transparent"
         >
           TECHNOTSAV 2026
         </motion.p>
@@ -299,7 +299,7 @@ const Hero = () => {
           transition={{ delay: 1.0, duration: 0.6 }}
           className="mt-8 h-16 flex items-center justify-center"
         >
-          <p className="text-xl md:text-2xl text-gray-300 font-light">
+          <p className="text-lg sm:text-2xl text-gray-300 font-light px-4">
             {typed}<span className="cursor text-[#2EC866]">|</span>
           </p>
         </motion.div>

@@ -42,14 +42,14 @@ const Navbar = () => {
             <a href="#" className="flex items-center gap-3 group">
               <div className="relative">
                 <div className="absolute inset-0 bg-neon-green/20 blur-md rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <img 
-                  src={heroLogo} 
-                  alt="PlaceX Logo" 
-                  className="w-10 h-10 object-contain relative z-10 group-hover:rotate-[10deg] transition-transform duration-500" 
+                <img
+                  src={heroLogo}
+                  alt="PlaceX Logo"
+                  className="w-10 h-10 object-contain relative z-10 group-hover:rotate-[10deg] transition-transform duration-500"
                 />
               </div>
-              <span className="text-2xl font-bold tracking-tighter flex items-center lowercase font-sans">
-                <span className="text-white">hackerrank</span>
+              <span className="text-xl sm:text-2xl font-black tracking-tighter flex items-center font-sans">
+                <span className="text-white">Hackerrank</span><span className="gradient-text">Rank</span>
               </span>
             </a>
 

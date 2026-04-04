@@ -66,9 +66,9 @@ const Footer = () => {
                   className="w-10 h-10 object-contain relative z-10 transition-transform duration-500" 
                 />
               </div>
-              <span className="text-3xl font-bold tracking-tighter lowercase font-sans">
-                <span className="text-white">hackerrank</span>
-                <span className="text-gray-600 text-xl font-light ml-2">2026</span>
+              <span className="text-2xl sm:text-3xl font-bold tracking-tighter font-sans">
+                <span className="text-white">Hacker</span><span className="gradient-text">Rank</span>
+                <span className="text-gray-600 text-lg sm:text-xl font-light ml-2">2026</span>
               </span>
             </a>
             <p className="text-gray-500 leading-relaxed max-w-xs text-sm mb-6">
