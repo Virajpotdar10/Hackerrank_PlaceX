@@ -49,7 +49,7 @@ const Navbar = () => {
                 />
               </div>
               <span className="text-xl sm:text-2xl font-black tracking-tighter flex items-center font-sans">
-                <span className="text-white">Hackerrank</span><span className="gradient-text">Rank</span>
+                <span className="text-white">Hacker</span><span className="gradient-text">Rank</span>
               </span>
             </a>
 

@@ -164,7 +164,7 @@ const Hero = () => {
           className="mb-4"
         >
           <span className="text-gray-400 text-[9px] sm:text-xs font-bold font-mono uppercase tracking-[0.2em] sm:tracking-[0.3em] bg-white/5 px-4 py-2 rounded-full border border-white/10 whitespace-nowrap">
-            HackerRank Campus Crew DYPCET Present
+            HackerRank Campus Crew DYPCET Presents
           </span>
         </motion.div>
 
