@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Code2, MessageCircle, Briefcase, Zap, ExternalLink } from 'lucide-react';
+import heroLogo from '../assets/hero.png';
 
 const quickLinks = [
   { label: 'Home', href: '#' },
@@ -30,7 +31,7 @@ const Footer = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-neon-green/5 via-transparent to-blue-500/5" />
           <div className="relative z-10">
             <div className="w-14 h-14 rounded-2xl bg-neon-green/10 border border-neon-green/30 flex items-center justify-center mx-auto mb-6">
-              <Zap className="w-7 h-7 text-neon-green" fill="currentColor" />
+              <img src={heroLogo} alt="Logo" className="w-8 h-8 object-contain" />
             </div>
             <h3 className="text-3xl md:text-4xl font-black text-white mb-3">
               Are You <span className="gradient-text">Ready?</span>
@@ -56,13 +57,18 @@ const Footer = () => {
 
           {/* Brand */}
           <div className="md:col-span-2">
-            <a href="#" className="inline-flex items-center gap-2 mb-4 group">
-              <div className="w-9 h-9 rounded-xl bg-neon-green/10 border border-neon-green/30 flex items-center justify-center">
-                <Zap className="w-4 h-4 text-neon-green" fill="currentColor" />
+            <a href="#" className="inline-flex items-center gap-3 mb-4 group">
+              <div className="relative">
+                <div className="absolute inset-0 bg-neon-green/20 blur-md rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <img 
+                  src={heroLogo} 
+                  alt="PlaceX Logo" 
+                  className="w-10 h-10 object-contain relative z-10 transition-transform duration-500" 
+                />
               </div>
-              <span className="text-3xl font-black">
-                <span className="text-white">Place</span><span className="gradient-text text-glow-sm">X</span>
-                <span className="text-gray-600 text-xl font-light ml-1">2026</span>
+              <span className="text-3xl font-bold tracking-tighter lowercase font-sans">
+                <span className="text-white">hackerrank</span>
+                <span className="text-gray-600 text-xl font-light ml-2">2026</span>
               </span>
             </a>
             <p className="text-gray-500 leading-relaxed max-w-xs text-sm mb-6">
@@ -104,8 +110,8 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-neon-green flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-gray-300 text-sm font-medium">D. Y. Patil College of Engineering Kolhapur </p>
-                  <p className="text-gray-600 text-xs mt-0.5">(Kasaba Bawada)</p>
+                  <p className="text-gray-300 text-sm font-medium">DY Patil College of Engineering</p>
+                  <p className="text-gray-600 text-xs mt-0.5">(Kasaba Bawada, Kolhapur)</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -129,7 +135,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-700 text-xs font-mono text-center">
-            © 2026 <span className="text-gray-500">Technotsav</span>. All Rights Reserved. Made with ❤️ by Viraj
+            © 2026 <span className="text-gray-500">Technotsav</span>. All Rights Reserved. Made with ❤️ by HCC-DYPCET
           </p>
           <div className="flex items-center gap-1 text-gray-700 text-xs font-mono">
             <span className="w-2 h-2 rounded-full bg-neon-green animate-pulse" />

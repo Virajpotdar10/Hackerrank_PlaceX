@@ -150,10 +150,22 @@ const Hero = () => {
 
 
           <span className="text-[#2EC866] text-[10px] sm:text-xs font-bold font-mono uppercase tracking-[0.25em] relative z-10">
-            D.Y Patil College of Engineering and Technology, Kolhapur
+            DY Patil College of Engineering and Technology Kasaba Bawada, Kolhapur
           </span>
 
           <div className="absolute inset-0 rounded-full border border-[#2EC866]/0 group-hover:border-[#2EC866]/40 transition-colors duration-300 -z-10" />
+        </motion.div>
+
+        {/* Presenter Text */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="mb-4"
+        >
+          <span className="text-gray-400 text-[10px] sm:text-xs font-bold font-mono uppercase tracking-[0.3em] bg-white/5 px-4 py-1.5 rounded-full border border-white/10">
+            HackerRank Campus Crew DYPCET Present
+          </span>
         </motion.div>
 
         {/* Modern Split Text Animation */}

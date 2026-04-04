@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import heroLogo from '../assets/hero.png';
 
 const links = [
   { label: 'Home', href: '#' },
@@ -38,12 +39,17 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-16">
 
             {/* Logo */}
-            <a href="#" className="flex items-center gap-2 group">
-              <div className="w-8 h-8 rounded-lg bg-neon-green/10 border border-neon-green/30 flex items-center justify-center group-hover:bg-neon-green/20 transition-all">
-                <Zap className="w-4 h-4 text-neon-green" fill="currentColor" />
+            <a href="#" className="flex items-center gap-3 group">
+              <div className="relative">
+                <div className="absolute inset-0 bg-neon-green/20 blur-md rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <img 
+                  src={heroLogo} 
+                  alt="PlaceX Logo" 
+                  className="w-10 h-10 object-contain relative z-10 group-hover:rotate-[10deg] transition-transform duration-500" 
+                />
               </div>
-              <span className="text-2xl font-black tracking-tighter">
-                <span className="text-white">Place</span><span className="gradient-text text-glow-sm">X</span>
+              <span className="text-2xl font-bold tracking-tighter flex items-center lowercase font-sans">
+                <span className="text-white">hackerrank</span>
               </span>
             </a>
 
