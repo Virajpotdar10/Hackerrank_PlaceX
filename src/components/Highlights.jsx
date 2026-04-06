@@ -8,8 +8,8 @@ const prizes = [
     icon: Trophy,
     color: '#FFD700',
     rgb: '255, 215, 0',
-
     perks: [
+      '💰 Cash Prize ₹3000',
       '🏆 Exclusive Winner Trophy',
       '🚀 HackerRank Infinity Plan (1 Year)',
       '🎯 Mock Interview Credits',
@@ -23,6 +23,7 @@ const prizes = [
     color: '#C0C0C0',
     rgb: '192, 192, 192',
     perks: [
+      '💰 Cash Prize ₹2000',
       '🏆 Exclusive Winner Trophy',
       '🚀 HackerRank Infinity Plan (1 Year)',
       '🎯 Mock Interview Credits',
@@ -35,8 +36,8 @@ const prizes = [
     icon: Award,
     color: '#CD7F32',
     rgb: '205, 127, 50',
-
     perks: [
+      '💰 Cash Prize ₹1000',
       '🏆 Exclusive Winner Trophy',
       '🚀 HackerRank Infinity Plan (1 Year)',
       '🎯 Mock Interview Credits',
@@ -45,7 +46,6 @@ const prizes = [
     ],
   },
 ];
-
 
 
 const Highlights = () => {
@@ -136,11 +136,11 @@ const Highlights = () => {
           <div className="inline-block glass px-6 py-4 md:px-10 md:py-6 rounded-2xl md:rounded-3xl border border-[#2EC866]/20 bg-[#2EC866]/5 shadow-[0_0_40px_rgba(46,200,102,0.1)] relative overflow-hidden group">
             {/* Animated background glow for the note */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#2EC866]/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-            
+
             <p className="text-white text-sm md:text-lg font-medium flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 leading-relaxed">
               <span className="text-xl md:text-3xl animate-bounce">✨</span>
               <span className="text-center">
-                All participants will receive a 
+                All participants will receive a
                 <span className="block md:inline text-[#2EC866] font-bold md:ml-2 drop-shadow-[0_0_10px_rgba(46,200,102,0.3)]">
                   Certificate of Participation
                 </span>

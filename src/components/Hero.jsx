@@ -320,7 +320,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3, duration: 0.6 }}
-            href="https://bit.ly/PlaceX2026"
+            href="https://forms.gle/detUkDPVEqvjgz926"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative px-10 py-4 bg-[#2EC866] text-black font-black text-base rounded-2xl pulse-glow uppercase tracking-widest overflow-hidden"
