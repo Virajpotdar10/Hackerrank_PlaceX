@@ -33,7 +33,7 @@ const faqData = [
   },
   {
     question: "What should I bring on the event day?",
-    answer: "Carry your college ID card and basic essentials. You may bring your own laptop (with charger), or you can use the PCs provided at the venue"
+    answer: "Carry your college ID card and basic essentials. Bring your own laptop "
   },
   {
     question: "How will results be announced?",

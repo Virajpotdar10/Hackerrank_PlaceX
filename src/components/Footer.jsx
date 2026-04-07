@@ -60,10 +60,10 @@ const Footer = () => {
             <a href="#" className="inline-flex items-center gap-3 mb-4 group">
               <div className="relative">
                 <div className="absolute inset-0 bg-neon-green/20 blur-md rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <img 
-                  src={heroLogo} 
-                  alt="PlaceX Logo" 
-                  className="w-10 h-10 object-contain relative z-10 transition-transform duration-500" 
+                <img
+                  src={heroLogo}
+                  alt="PlaceX Logo"
+                  className="w-10 h-10 object-contain relative z-10 transition-transform duration-500"
                 />
               </div>
               <span className="text-2xl sm:text-3xl font-bold tracking-tighter font-sans">

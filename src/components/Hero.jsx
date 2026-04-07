@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Zap, ChevronDown, Sparkles } from 'lucide-react';
+import dypLogo from '../assets/logo.jpg';
 
 /* ─── Particle canvas with HackerRank colors ─── */
 const ParticleCanvas = () => {
@@ -134,27 +135,36 @@ const Hero = () => {
 
         {/* Floating badge */}
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.6 }}
-          whileHover={{ scale: 1.05, translateY: -2 }}
-          className="relative inline-flex items-center gap-3 px-6 py-2.5 rounded-full border border-[#2EC866]/20 bg-[#2EC866]/5 backdrop-blur-md mb-8 group cursor-default overflow-hidden"
-        >
-          {/* Internal Shimmer Effect */}
-          <motion.div
-            className="absolute inset-0 w-[200%] h-full bg-gradient-to-r from-transparent via-[#2EC866]/10 to-transparent -z-10"
-            animate={{ x: ['-100%', '100%'] }}
-            transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
-          />
+           initial={{ opacity: 0, y: -20 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ delay: 0.1, duration: 0.6 }}
+           whileHover={{ scale: 1.05, translateY: -2 }}
+           className="relative inline-flex items-center gap-3 px-6 py-2.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-8 group cursor-default overflow-hidden"
+         >
+           {/* Internal Shimmer Effect */}
+           <motion.div
+             className="absolute inset-0 w-[200%] h-full bg-gradient-to-r from-transparent via-white/5 to-transparent -z-10"
+             animate={{ x: ['-100%', '100%'] }}
+             transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
+           />
 
+           <div className="relative flex-shrink-0">
+             <div className="absolute inset-0 bg-white/40 blur-xl rounded-full opacity-70 group-hover:opacity-100 transition-opacity duration-500" />
+             <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-0.5 relative z-10 shadow-[0_0_20px_rgba(255,255,255,0.5)] border border-white/30">
+               <img
+                 src={dypLogo}
+                 alt="DYP"
+                 className="w-full h-full object-contain rounded-full contrast-[1.1] brightness-105"
+               />
+             </div>
+           </div>
 
+           <span className="text-gray-300 text-[10px] sm:text-xs font-bold font-mono uppercase tracking-[0.1em] sm:tracking-[0.2em] relative z-10 text-center px-1">
+             DY Patil College of Engineering and Technology, Kolhapur
+           </span>
 
-          <span className="text-[#2EC866] text-[9px] sm:text-xs font-bold font-mono uppercase tracking-[0.15em] sm:tracking-[0.25em] relative z-10 text-center px-2">
-            DY Patil College of Engineering and Technology, Kolhapur
-          </span>
-
-          <div className="absolute inset-0 rounded-full border border-[#2EC866]/0 group-hover:border-[#2EC866]/40 transition-colors duration-300 -z-10" />
-        </motion.div>
+           <div className="absolute inset-0 rounded-full border border-white/0 group-hover:border-white/20 transition-colors duration-300 -z-10" />
+         </motion.div>
 
         {/* Presenter Text */}
         <motion.div
@@ -311,7 +321,7 @@ const Hero = () => {
           transition={{ delay: 1.2, duration: 0.5 }}
           className="text-gray-500 text-base mt-2 font-mono tracking-wide"
         >
-          National Hiring Simulation Challenge — April 16, 2026 | Registration Fee: ₹100
+          National Hiring Simulation Challenge — April 16, 2026 | Registration Fee: ₹100 (Includes Refreshments)
         </motion.p>
 
         {/* CTA Buttons - Simplified for robustness */}

@@ -31,7 +31,7 @@ const details = [
   { icon: Clock, title: 'Starts', value: '9:00 AM' },
   { icon: Target, title: 'Rounds', value: '3 Rounds', sub: 'Aptitude → Code → Debug' },
   { icon: Layers, title: 'Platform', value: 'HackerRank', sub: 'Coding round' },
-  { icon: Wallet, title: 'Registration Fee', value: '₹100', sub: 'Per Participant' },
+  { icon: Wallet, title: 'Registration Fee', value: '₹100', sub: 'Per Participant (Includes Refreshments)' },
 ];
 
 
@@ -60,7 +60,7 @@ const EventDetails = () => {
             The <span className="gradient-text">Event</span> Experience
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            PlaceX is a comprehensive simulation of the actual placement process — sharpening your skills for the real corporate world.
+            PlaceX is a comprehensive simulation of the actual placement process — sharpening your skills for the real corporate world. (Registration includes refreshments)
           </p>
         </motion.div>
 
